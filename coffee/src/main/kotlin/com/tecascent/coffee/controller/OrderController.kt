@@ -16,11 +16,11 @@ class OrderController @Autowired constructor(@Qualifier("orderServiceImpl") val 
     override fun update(@PathVariable id: Long, entity: OrderEntity) = service.update(id, entity)
 
     @GetMapping("/{id}")
-    override fun findById(id: Long) = service.findById(id)
+    override fun findById(@PathVariable id: Long) = service.findById(id)
 
     @GetMapping
     override fun findAll() = service.findAll()
 
     @DeleteMapping("/{id}")
-    override fun deleteById(id: Long) = service.deleteById(id)
+    override fun deleteById(@PathVariable id: Long) = service.deleteById(id)
 }
