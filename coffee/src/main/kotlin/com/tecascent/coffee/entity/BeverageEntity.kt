@@ -6,7 +6,7 @@ import jakarta.persistence.*
 
 @Entity
 @Access(AccessType.FIELD)
-@Table(name = "Beverage")
+@Table(name = "table_beverage")
 data class BeverageEntity(
     var name: String,
 
